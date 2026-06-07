@@ -332,13 +332,11 @@ export default function PriseRDV() {
               <Button variant="outline" onClick={() => setEtape(2)} className="flex-1">
                 Retour
               </Button>
-              <Button
-                className="flex-1 bg-blue-600 hover:bg-blue-700 text-white"
-                disabled={loading}
-                onClick={confirmerRDV}
-              >
-                {loading ? 'Enregistrement...' : 'Confirmer le RDV ✓'}
-              </Button>
+              <Link href="/paiement" className="flex-1">
+                <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">
+                 💳 Payer {medecin.tarif} MRU
+                </Button>
+              </Link>
             </div>
           </div>
         )}
