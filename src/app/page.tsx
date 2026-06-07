@@ -31,6 +31,9 @@ export default function HomePage() {
             <div className="w-9 h-9 bg-blue-600 rounded-xl flex items-center justify-center">
               <Heart className="w-5 h-5 text-white" />
             </div>
+            <Link href="/tarifs" className="text-gray-600 hover:text-blue-600 transition-colors text-sm">
+            Tarifs
+            </Link>
             <span className="text-xl font-bold text-gray-900">Mauri<span className="text-blue-600">Health</span></span>
           </div>
           <nav className="hidden md:flex items-center gap-8">

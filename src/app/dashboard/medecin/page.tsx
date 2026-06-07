@@ -209,6 +209,26 @@ export default function MedecinDashboard() {
             </button>
           </div>
         )}
+        {/* ABONNEMENT */}
+        <div className="mt-4 p-4 bg-blue-50 rounded-xl border border-blue-100">
+          <div className="flex items-center justify-between mb-3">
+            <p className="font-semibold text-gray-900 text-sm">Mon abonnement</p>
+            <span className={`text-xs px-2 py-1 rounded-full font-medium ${
+              planActuel === 'saas' ? 'bg-blue-100 text-blue-600' :
+              planActuel === 'commission' ? 'bg-amber-100 text-amber-600' :
+              'bg-green-100 text-green-600'
+              }`}>
+                {planActuel === 'saas' ? '⚡ SaaS 1500 MRU/mois' :
+                planActuel === 'commission' ? '🤝 Commission 150 MRU/RDV' :
+                 `🎁 Essai gratuit — ${joursRestants}j`}
+            </span>
+          </div>
+          <Link href="/tarifs">
+            <Button size="sm" className="w-full bg-blue-600 hover:bg-blue-700 text-white">
+              Gérer mon abonnement →
+            </Button>
+          </Link>
+        </div>
 
       </div>
     </div>
